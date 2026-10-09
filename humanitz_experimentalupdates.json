@@ -1,11 +1,24 @@
 [
     {
-        "UpdateStageName": "SteamCMD Download",
+        "UpdateStageName": "SteamCMD Public Server Download",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "2728330",
         "UpdateSourceArgs": "1766060",
-        "UpdateSourceVersion": "experimental",
+        "UpdateSourceVersion": "public",
+        "UpdateSourceConditionSetting": "EnableBeta",
+        "UpdateSourceConditionValue": "false",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "SteamCMD Beta Server Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "2728330",
+        "UpdateSourceArgs": "1766060",
+        "UpdateSourceVersion": "{{BetaBranch}}",
+        "UpdateSourceConditionSetting": "EnableBeta",
+        "UpdateSourceConditionValue": "true",
         "SkipOnFailure": false
     },
     {
@@ -17,7 +30,7 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "SteamCMD Download",
+        "UpdateStageName": "SteamCMD Linux Server Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "2728330",
