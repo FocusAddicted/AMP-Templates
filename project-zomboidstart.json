@@ -1,0 +1,11 @@
+[
+    {
+        "UpdateStageName": "RuhrpottZ-Datenbank starten",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/usr/bin/flock",
+        "UpdateSourceArgs": "-n -F \"{{$FullBaseDir}}Zomboid/RuhrpottZ-DB/worker.lock\" /usr/bin/python3 -u \"{{$FullBaseDir}}Zomboid/RuhrpottZ-DB/sqlite_service.py\" --cachedir \"{{$FullBaseDir}}Zomboid\" --server \"{{servername}}\"",
+        "RunInBackground": true,
+        "SkipOnFailure": true
+    }
+]
